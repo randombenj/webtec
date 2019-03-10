@@ -1,0 +1,72 @@
+/* -- FONTS -- */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+/* -- VARIABLES -- */
+:root {
+  --content-max-width: 900px;
+
+  --background-color: #f3f3f3;
+}
+
+/* -- LAYOUT -- */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(161, 0, 62);
+}
+
+main, 
+header {
+  width: var(--content-max-width);
+  margin: auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  main,
+  header {
+    width: 100%;
+    margin: 0px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* -- ELEMENTS -- */
+.card {
+  padding: 10px;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.menu {
+  width: auto;
+  display: block;
+}
+
+.menu > a:not(:first-child) {
+  border-left: 1px solid rgb(182, 182, 182);
+  padding-left: 10px;
+  margin-left: 10px;
+}
