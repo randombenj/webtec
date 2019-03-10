@@ -86,3 +86,11 @@ WEBTEC.artist = {
     }
   }
 }
+
+WEBTEC.invertColor = () => {
+  let inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
+  inverted = inverted ? (inverted[2] == 'true') : false;
+  let value = inverted ? '0' : '100';
+  document.cookie = `inverted=${!inverted}`;
+  $('body').css('filter', `invert(${value}%)`);
+}

@@ -108,3 +108,10 @@ main {
   height: 15px;
   width: 15px;
 }
+
+.invert-color {
+  bottom: 30px;
+  left: 30px;
+  position: sticky;
+  cursor: pointer;
+}
