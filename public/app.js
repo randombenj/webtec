@@ -90,6 +90,9 @@ WEBTEC.artist = {
 WEBTEC.theme = {
   getState() {
     let inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
+    if (inverted === null) {
+      return true;
+    }
     return inverted ? (inverted[2] == 'true') : false; 
   },
   invertColor() {
