@@ -14,10 +14,11 @@
           <a href="#intro-menu">Intro</a>
           <a href="#canvas-menu">Canvas</a>
           <a href="#slideshow-menu">Slideshow</a>
+          <a href="#contact-menu">Contact</a>
         </div>
     </header>
     <main>
-      <h3 id="intro-menu" class="column-span">Responsive intro</h3>
+      <h3 id="intro-menu" class="column-span">Responsive intro <i class="fas fa-check"></i></h3>
       <div class="card">
           <p>
             Those two cards will be displayed responsively when 
@@ -28,7 +29,7 @@
           <p>I am responsive!</p>
       </div>
 
-      <h3 id="canvas-menu" class="column-span">A canvas you can draw on</h3>
+      <h3 id="canvas-menu" class="column-span">A canvas you can draw on <i class="fas fa-pencil-alt"></i></h3>
       <div class="card column-span no-padding drawing-area">
         <canvas id="canvas" class="canvas" width="900" height="400"></canvas>
         <div class="drawing-controls">
@@ -44,7 +45,7 @@
         </div>
       </div>
 
-      <h3 id="slideshow-menu" class="column-span">See the Otter life in this awesome Slideshow!</h3>
+      <h3 id="slideshow-menu" class="column-span">See the Otter life in this awesome Slideshow! <i class="far fa-images"></i></h3>
       <div class="card column-span no-padding slideshow-container">
         <img alt="otter" class="slideshow" src="" />
         <div class="slideshow-control slideshow-control-forward" onclick="slider.next()">
@@ -53,6 +54,31 @@
         <div class="slideshow-control slideshow-control-back" onclick="slider.prev()">
           <i class="fas fa-chevron-left"></i>
         </div>
+      </div>
+
+      <h3 id="contact-menu" class="column-span">If you like this page, contact me <i class="fas fa-paper-plane"></i></h3>
+      <div class="card">
+        <p>
+          Please contact me by providing an email 
+          and a password! <strong>Spam guaranteed! <i class="far fa-smile"></i></strong>
+        </p>
+      </div>
+      <div class="card">
+        <form id="contact-form">
+          <div class="input-container">
+              <input id="email" type="email" name="email" value="" placeholder="Email">
+              <span class="icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+          </div>
+          <div class="input-container">
+              <input id="password" type="password" name="password" value="" placeholder="Password">
+              <span class="icon">
+                <i class="fas fa-unlock"></i>
+              </span>
+          </div>
+          <button class="button" type="button" onclick="WEBTEC.contact()">Contact me!</button>
+        </form> 
       </div>
     </main>
 

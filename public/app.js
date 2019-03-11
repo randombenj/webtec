@@ -123,3 +123,30 @@ WEBTEC.slider = {
     $('.slideshow').attr('src', `img/${this.index}.jpg`);
   }
 }
+
+WEBTEC.contact = () => {
+  const email = $("#email");
+  const password = $("#password");
+
+  if (email.val() === "") {
+    alert("Pleas provide a mail address!");
+    return;
+  }
+
+  if (password.val() === "") {
+    alert("Pleas provide a password!");
+    return;
+  }
+
+  $.ajax({
+    type: 'POST',
+    url: 'https://webtec.l33tsource.com/form_response.php',
+    data: $('#contact-form').serialize(),
+    success: (data) => {
+      alert("Ajax response from server: " + data);
+    },
+    error: () => {
+      alert("Server is not happy with the form!");
+    },
+  });
+}
