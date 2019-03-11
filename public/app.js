@@ -87,10 +87,18 @@ WEBTEC.artist = {
   }
 }
 
-WEBTEC.invertColor = () => {
-  let inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
-  inverted = inverted ? (inverted[2] == 'true') : false;
-  let value = inverted ? '0' : '100';
-  document.cookie = `inverted=${!inverted}`;
-  $('body').css('filter', `invert(${value}%)`);
+WEBTEC.theme = {
+  getState() {
+    let inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
+    return inverted ? (inverted[2] == 'true') : false; 
+  },
+  invertColor() {
+    const inverted = this.getState();
+    document.cookie = `inverted=${!inverted}`;
+    this.setColor();
+  },
+  setColor() {
+    const value = this.getState() ? '0' : '100';
+    $('body').css('filter', `invert(${value}%)`);
+  }
 }
