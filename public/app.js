@@ -102,3 +102,24 @@ WEBTEC.theme = {
     $('body').css('filter', `invert(${value}%)`);
   }
 }
+
+WEBTEC.slider = {
+  index: 1,
+  start: 1,
+  end: 4,
+  next() {
+    if ((this.index + 1) <= this.end) {
+      this.index++;
+    }
+    this.show();
+  },
+  prev() {
+    if ((this.index - 1) >= this.start) {
+      this.index--;
+    }
+    this.show();
+  },
+  show() {
+    $('.slideshow').attr('src', `img/${this.index}.jpg`);
+  }
+}

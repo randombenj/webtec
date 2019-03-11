@@ -115,3 +115,38 @@ main {
   position: sticky;
   cursor: pointer;
 }
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-container > .slideshow {
+  width: 100%;
+}
+
+.slideshow-container > .slideshow-control {
+  height: 110px;
+  margin-top: -55px;
+  width: 60px;
+  background-color: #ffffff47;
+  position: absolute;
+  top: 50%;
+  font-size: 5em;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+.slideshow-container > .slideshow-control.slideshow-control-forward {
+  right: 10px;
+}
+
+.slideshow-container > .slideshow-control.slideshow-control-forward > i {
+  margin-left: 10px;
+}
+
+.slideshow-container > .slideshow-control.slideshow-control-back {
+  left: 10px;
+}
+
+
+
