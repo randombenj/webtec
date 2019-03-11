@@ -89,7 +89,7 @@ WEBTEC.artist = {
 
 WEBTEC.theme = {
   getState() {
-    let inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
+    const inverted = document.cookie.match('(^|;) ?inverted=([^;]*)(;|$)');
     if (inverted === null) {
       return true;
     }
